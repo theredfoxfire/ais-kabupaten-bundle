@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'kabupaten.list'|trans({}, 'AisKabupatenBundle') }}</h1>
+
+    <ul id="kabupaten-list">
+        {% for kabupaten in kabupatens %}
+            <li>
+                <a href="{{ path('api_1_get_kabupaten', {'id': kabupaten.id}) }}">{{ kabupaten.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_kabupatens', {'id': kabupaten.id}) }}">{{ 'kabupaten.edit.link'|trans({}, 'AisKabupatenBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_kabupatens', {'id': kabupaten.id}) }}">{{ 'kabupaten.remove.link'|trans({}, 'AisKabupatenBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'kabupaten.list.empty'|trans({}, 'AisKabupatenBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_kabupaten') }}">{{ 'kabupaten.new.link'|trans({}, 'AisKabupatenBundle') }}</a>
+    </p>
+{% endblock %}

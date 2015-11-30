@@ -1,0 +1,19 @@
+Ais\KabupatenBundle\Entity\Kabupaten:
+ type: entity
+ table: kabupaten
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  provinsi_id:
+   type: integer
+   nullable: true
+  nama:
+   type: string
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true

@@ -1,0 +1,5 @@
+ais_kabupaten_kabupaten:
+    type: rest
+    prefix: /v1
+    resource: Ais\KabupatenBundle\Controller\KabupatenController
+    name_prefix:  api_1_ # naming collision
