@@ -142,4 +142,3 @@ class Kabupaten implements KabupatenInterface
         return $this->is_delete;
     }
 }
-

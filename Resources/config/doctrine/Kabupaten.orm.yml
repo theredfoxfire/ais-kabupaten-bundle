@@ -1,6 +1,7 @@
 Ais\KabupatenBundle\Entity\Kabupaten:
  type: entity
  table: kabupaten
+ repositoryClass: Ais\KabupatenBundle\Repository\KabupatenRepository
  id:
   id: 
    type: integer
